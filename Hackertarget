@@ -1,0 +1,256 @@
+<center>
+<br>
+<input placeholder="Search The Bug Host" id="myInput">
+<br>
+</center>
+
+<button id="myBtn">
+    <p>Search</p>
+    <svg stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+    </svg>
+</button>
+
+    <div class="card">
+        <div class="top">
+            <div class="dots">
+                <div class="dot dot-1"></div>
+                <div class="dot dot-2"></div>
+                <div class="dot dot-3"></div>
+              </div>
+            <p class="g-color">_></p>
+        </div>
+        <div class="bottom">
+            <p class="code">
+                <span class="red">function</span> <span class="violet">BugHost</span><span class="blue">(</span><span class="orange">text</span><span class="blue">)</span><span class="blue">{</span><br>
+                    <span class="red space-4">for</span><span class="orange">(</span><span class="red">let</span> <span class="white">i</span> <span class="red">=</span> <span class="blue">0</span> <span class="white">; i</span> <span class="red"><</span> <span class="blue">10</span> <span class="white">; i</span><span class="red">++</span><span class="orange">){</span><br>
+                        <span class="blue space-4x2">console</span><span class="white">.</span><span class="violet">log(</span><span class="blue">`${</span><span class="orange">text</span><span class="blue">}`</span><span class="violet">)</span><span class="white">;</span><br>
+                    <span class="orange space-4">}</span><br>
+                <span class="blue">}</span><br>
+                <br>
+                <span class="violet">BugHost</span><span class="blue">('Host')</span><span class="white">;</span><br>
+                <br><span id="demo" style="color: #1fbc00;">Output ..</span>
+            </p>            
+        </div>
+      </div>
+
+
+<style>
+input {
+  display: inline-block;
+  max-width: 196px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  -webkit-border-radius: 11px;
+  border-radius: 11px;
+  font: normal 19px/normal "Courier New", Courier, monospace;
+  color: rgba(42,255,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: *rgba(45,45,45,1);
+  box-shadow: *0 0 9px 4px rgba(0,0,0,0.15) , -1px 4px 8px -1px rgba(0,0,0,0.49) inset;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transform: rotateX(-16.62deg) rotateY(-28.64788975654116deg);
+  transform: rotateX(-16.62deg) rotateY(-28.64788975654116deg);
+}
+
+input:hover {
+  -webkit-transform: rotateX(-15.62deg) rotateY(-23.65deg);
+  transform: rotateX(-15.62deg) rotateY(-23.65deg);
+}
+
+.search__icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: #b4b4b4;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+button {
+  margin-left: 45px;
+  border: none;
+  background: none;
+}
+
+button {
+  --primary-color: #111;
+  --hovered-color: #c84747;
+  position: relative;
+  display: flex;
+  font-weight: 500;
+  font-size: 18px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+button p {
+  margin: 0;
+  position: relative;
+  font-size: 18px;
+  color: var(--primary-color)
+}
+
+button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+button p::before {
+  position: absolute;
+/*   box-sizing: border-box; */
+  content: "Search";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+button:hover::after {
+  width: 100%;
+}
+
+button:hover p::before {
+  width: 100%;
+}
+
+button:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color)
+}
+
+button svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
+
+
+.card {
+  font-family: monospace;
+  margin-top: 10px;
+  margin-left: 15px;
+  width: 350px;
+  
+  background: *rgba(45,45,45,1);
+  border: 2px solid #000;
+  border-radius: 15px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.dots {
+  display: flex;
+  justify-content: last baseline;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.dot-1 {
+  background-color: rgb(0, 132, 255);
+}
+
+.dot-2 {
+  background-color: rgb(230, 0, 255);
+}
+
+.dot-3 {
+  background-color: rgb(0, 255, 89);
+}
+
+.top p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.dot , .top p {
+  margin: 5px;
+}
+
+.g-color {
+  color: darkgreen;
+}
+
+.bottom {
+  margin-top: 30px;
+  padding: 0 25px;
+}
+
+.code {
+  font-size: 15px;
+}
+
+.red {
+  color: rgb(210, 63, 52);
+}
+
+.violet {
+  color: rgb(181, 40, 203);
+}
+
+.blue {
+  color: rgb(91, 131, 223);
+}
+
+.orange {
+  color: rgb(195, 128, 3);
+}
+
+.white {
+  color: rgb(163, 163, 163);
+}
+
+.space-4 {
+  margin-left: 35px;
+}
+
+.space-4x2 {
+  margin-left: 70px;
+}
+</style>
+
+<script>
+window.onload = function() {
+  document.getElementById("myBtn").addEventListener("click", function(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        let response = this.responseText;
+        let arr = response.split('\n');
+        let output = '';
+        arr.forEach(element => {
+          output += element + '<br>';
+        });
+        document.getElementById("demo").innerHTML = output;
+      }
+    };
+    xhttp.open("GET", "https://api.hackertarget.com/hostsearch/?q=" + document.getElementById("myInput").value, true);
+    xhttp.send();
+  });
+};
+</script>
